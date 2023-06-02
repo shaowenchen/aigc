@@ -1,0 +1,411 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Kubernetes · AIGC</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="mysql.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.chenshaowen.com/" target="_blank" class="custom-link">AIGC</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="redis.html">
+            
+                <a href="redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="mysql.html">
+            
+                <a href="mysql.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="kubernetes.html">
+            
+                <a href="kubernetes.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Kubernetes</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#kubernetes"><b></b>Kubernetes</a></li><ul><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x573A;&#x666F;"><b></b>&#x5E38;&#x7528;&#x573A;&#x666F;</a></li><li><span class="title-icon "></span><a href="#&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528;-kubernetes"><b></b>&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528; Kubernetes</a></li><li><span class="title-icon "></span><a href="#kubernetes-&#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;"><b></b>Kubernetes &#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;</a></li><li><span class="title-icon "></span><a href="#kubernetes-&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;"><b></b>Kubernetes &#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;</a></li></ul></ul></div><a href="#kubernetes" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="kubernetes"><a name="kubernetes" class="anchor-navigation-ex-anchor" href="#kubernetes"><i class="fa fa-link" aria-hidden="true"></i></a>Kubernetes</h1>
+<h2 id="&#x5E38;&#x7528;&#x573A;&#x666F;"><a name="&#x5E38;&#x7528;&#x573A;&#x666F;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x573A;&#x666F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x573A;&#x666F;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x573A;&#x666F;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5927;&#x89C4;&#x6A21;&#x5E94;&#x7528;&#x90E8;&#x7F72;</td>
+<td>Kubernetes &#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x5927;&#x91CF;&#x7684;&#x5BB9;&#x5668;&#x5E94;&#x7528;&#xFF0C;&#x5E76;&#x63D0;&#x4F9B;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x6269;&#x5C55;&#x548C;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x529F;&#x80FD;&#xFF0C;&#x9002;&#x7528;&#x4E8E;&#x9700;&#x8981;&#x5FEB;&#x901F;&#x90E8;&#x7F72;&#x548C;&#x6269;&#x5C55;&#x7684;&#x5927;&#x89C4;&#x6A21;&#x5E94;&#x7528;&#x573A;&#x666F;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x591A;&#x79DF;&#x6237;&#x73AF;&#x5883;</td>
+<td>Kubernetes &#x53EF;&#x4EE5;&#x652F;&#x6301;&#x591A;&#x79DF;&#x6237;&#x73AF;&#x5883;&#xFF0C;&#x901A;&#x8FC7; Namespace &#x7684;&#x6982;&#x5FF5;&#x9694;&#x79BB;&#x4E0D;&#x540C;&#x79DF;&#x6237;&#x7684;&#x8D44;&#x6E90;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x96C6;&#x7FA4;&#x4E2D;&#x540C;&#x65F6;&#x8FD0;&#x884C;&#x591A;&#x4E2A;&#x5E94;&#x7528;&#xFF0C;&#x5E76;&#x4FDD;&#x8BC1;&#x5B83;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x5B89;&#x5168;&#x9694;&#x79BB;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x5F39;&#x6027;&#x4F38;&#x7F29;</td>
+<td>Kubernetes &#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5E94;&#x7528;&#x8D1F;&#x8F7D;&#x81EA;&#x52A8;&#x4F38;&#x7F29;&#x5E94;&#x7528;&#x5B9E;&#x4F8B;&#x6570;&#x91CF;&#xFF0C;&#x4EE5;&#x6EE1;&#x8DB3;&#x5E94;&#x7528;&#x7684;&#x9700;&#x6C42;&#xFF0C;&#x540C;&#x65F6;&#x8FD8;&#x80FD;&#x591F;&#x81EA;&#x52A8;&#x8C03;&#x6574;&#x8D44;&#x6E90;&#x4F7F;&#x7528;&#x91CF;&#x4EE5;&#x4F18;&#x5316;&#x5E94;&#x7528;&#x7684;&#x6027;&#x80FD;&#x548C;&#x53EF;&#x7528;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x5FAE;&#x670D;&#x52A1;&#x67B6;&#x6784;</td>
+<td>Kubernetes &#x652F;&#x6301;&#x5BB9;&#x5668;&#x5316;&#x7684;&#x5FAE;&#x670D;&#x52A1;&#x5E94;&#x7528;&#x67B6;&#x6784;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x5E94;&#x7528;&#x62C6;&#x5206;&#x6210;&#x591A;&#x4E2A;&#x5C0F;&#x670D;&#x52A1;&#x5E76;&#x5206;&#x522B;&#x90E8;&#x7F72;&#xFF0C;&#x63D0;&#x9AD8;&#x5E94;&#x7528;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x548C;&#x53EF;&#x6269;&#x5C55;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x6DF7;&#x5408;&#x4E91;&#x73AF;&#x5883;</td>
+<td>Kubernetes &#x652F;&#x6301;&#x5728;&#x516C;&#x6709;&#x4E91;&#x548C;&#x79C1;&#x6709;&#x4E91;&#x73AF;&#x5883;&#x4E2D;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#xFF0C;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#x6DF7;&#x5408;&#x4E91;&#x7684;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#xFF0C;&#x540C;&#x65F6;&#x4FDD;&#x8BC1;&#x5E94;&#x7528;&#x7684;&#x4E00;&#x81F4;&#x6027;&#x548C;&#x53EF;&#x79FB;&#x690D;&#x6027;&#x3002;</td>
+</tr>
+<tr>
+<td>&#x6301;&#x7EED;&#x96C6;&#x6210;&#x548C;&#x6301;&#x7EED;&#x90E8;&#x7F72;</td>
+<td>Kubernetes &#x53EF;&#x4EE5;&#x4E0E;&#x6301;&#x7EED;&#x96C6;&#x6210;&#x548C;&#x6301;&#x7EED;&#x90E8;&#x7F72;&#x5DE5;&#x5177;&#x96C6;&#x6210;&#xFF0C;&#x5982; Jenkins&#x3001;GitLab &#x548C; Travis CI&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x548C;&#x66F4;&#x65B0;&#x5E94;&#x7528;&#xFF0C;&#x63D0;&#x9AD8;&#x5E94;&#x7528;&#x4EA4;&#x4ED8;&#x7684;&#x6548;&#x7387;&#x548C;&#x53EF;&#x9760;&#x6027;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528;-kubernetes"><a name="&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528;-kubernetes" class="anchor-navigation-ex-anchor" href="#&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528;-kubernetes"><i class="fa fa-link" aria-hidden="true"></i></a>&#x516C;&#x6709;&#x4E91;&#x4E0A;&#x4F7F;&#x7528; Kubernetes</h2>
+<table>
+<thead>
+<tr>
+<th>&#x90E8;&#x7F72;&#x65B9;&#x5F0F;</th>
+<th>&#x5EFA;&#x8BAE;&#x7684;&#x9002;&#x7528;&#x573A;&#x666F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6258;&#x7BA1;&#x670D;&#x52A1;</td>
+<td>- &#x6CA1;&#x6709;&#x4E13;&#x4E1A;&#x7684; Kubernetes &#x8FD0;&#x7EF4;&#x56E2;&#x961F;<br>- &#x6CA1;&#x6709;&#x8DB3;&#x591F;&#x7684;&#x8D44;&#x6E90;&#x6765;&#x642D;&#x5EFA;&#x81EA;&#x5DF1;&#x7684; Kubernetes &#x96C6;&#x7FA4;<br>- &#x5FEB;&#x901F;&#x90E8;&#x7F72;&#x548C;&#x6269;&#x5C55;&#x5E94;&#x7528;<br>- &#x516C;&#x6709;&#x4E91;&#x5382;&#x5546;&#x63D0;&#x4F9B;&#x7684; Kubernetes &#x670D;&#x52A1;&#x53EF;&#x81EA;&#x52A8;&#x5316;&#x7BA1;&#x7406; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x8FD0;&#x884C;&#x548C;&#x7EF4;&#x62A4;&#xFF0C;&#x540C;&#x65F6;&#x63D0;&#x4F9B;&#x66F4;&#x9AD8;&#x7EA7;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x81EA;&#x52A8;&#x6269;&#x7F29;&#x5BB9;&#x3001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3001;&#x76D1;&#x63A7;&#x3001;&#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x7B49;<br>- &#x516C;&#x6709;&#x4E91;&#x5382;&#x5546;&#x63D0;&#x4F9B;&#x591A;&#x4E2A;&#x53EF;&#x7528;&#x533A;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x9AD8;&#x53EF;&#x7528;&#x6027;&#x548C;&#x707E;&#x5907;&#x6027;</td>
+</tr>
+<tr>
+<td>&#x81EA;&#x5EFA;&#x90E8;&#x7F72;</td>
+<td>- &#x9700;&#x8981;&#x9AD8;&#x5EA6;&#x5B9A;&#x5236;&#x5316;&#x7684; Kubernetes &#x73AF;&#x5883;<br>- &#x5BF9; Kubernetes &#x7684;&#x9AD8;&#x5EA6;&#x63A7;&#x5236;&#x529B;<br>- &#x6709;&#x4E30;&#x5BCC;&#x7684;&#x6280;&#x672F;&#x7ECF;&#x9A8C;&#x548C;&#x8D44;&#x6E90;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kubernetes-&#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;"><a name="kubernetes-&#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;" class="anchor-navigation-ex-anchor" href="#kubernetes-&#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;"><i class="fa fa-link" aria-hidden="true"></i></a>Kubernetes &#x6709;&#x54EA;&#x4E9B;&#x53D1;&#x884C;&#x7248;&#x672C;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x53D1;&#x884C;&#x7248;&#x672C;</th>
+<th>&#x7279;&#x70B9;</th>
+<th>&#x9002;&#x7528;&#x573A;&#x666F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Kubernetes &#x5B98;&#x65B9;&#x53D1;&#x884C;&#x7248;</td>
+<td>- &#x7531; Kubernetes &#x5B98;&#x65B9;&#x7EF4;&#x62A4;&#xFF0C;&#x662F;&#x6700;&#x539F;&#x59CB;&#x3001;&#x6700;&#x7A33;&#x5B9A;&#x7684;&#x7248;&#x672C;<br>- &#x793E;&#x533A;&#x652F;&#x6301;&#x5EA6;&#x9AD8;&#xFF0C;&#x6709;&#x66F4;&#x597D;&#x7684;&#x53EF;&#x7EF4;&#x62A4;&#x6027;&#x548C;&#x7A33;&#x5B9A;&#x6027;<br>- &#x9002;&#x5408;&#x6709;&#x4E00;&#x5B9A;&#x6280;&#x672F;&#x57FA;&#x7840;&#x548C;&#x8D44;&#x6E90;&#x7684;&#x4F01;&#x4E1A;&#x6216;&#x4E2A;&#x4EBA;&#x4F7F;&#x7528;</td>
+<td>- &#x6709;&#x8F83;&#x9AD8;&#x7684;&#x6280;&#x672F;&#x8981;&#x6C42;<br>- &#x5BF9; Kubernetes &#x7684;&#x5B9A;&#x5236;&#x5316;&#x9700;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;</td>
+</tr>
+<tr>
+<td>Google Kubernetes Engine (GKE)</td>
+<td>- &#x7531; Google &#x7EF4;&#x62A4;&#x7684; Kubernetes &#x7248;&#x672C;<br>- &#x96C6;&#x6210;&#x4E86; Google &#x81EA;&#x8EAB;&#x7684;&#x670D;&#x52A1;&#x548C;&#x5DE5;&#x5177;&#xFF0C;&#x5982; Google Cloud Storage&#x3001;Google Cloud Build &#x7B49;<br>- &#x81EA;&#x52A8;&#x5316;&#x7BA1;&#x7406; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x8FD0;&#x884C;&#x548C;&#x7EF4;&#x62A4;<br>- &#x652F;&#x6301;&#x81EA;&#x52A8;&#x6269;&#x7F29;&#x5BB9;&#x3001;&#x8D1F;&#x8F7D;&#x5747;&#x8861;&#x3001;&#x76D1;&#x63A7;&#x3001;&#x65E5;&#x5FD7;&#x6536;&#x96C6;&#x7B49;&#x9AD8;&#x7EA7;&#x529F;&#x80FD;</td>
+<td>- &#x4F7F;&#x7528; Google Cloud Platform &#x7684;&#x4F01;&#x4E1A;&#x6216;&#x4E2A;&#x4EBA;</td>
+</tr>
+<tr>
+<td>Red Hat OpenShift</td>
+<td>- &#x57FA;&#x4E8E; Kubernetes &#x7684;&#x5F00;&#x6E90; PaaS &#x5E73;&#x53F0;<br>- &#x96C6;&#x6210;&#x4E86; Istio&#x3001;Knative &#x7B49;&#x7EC4;&#x4EF6;<br>- &#x9488;&#x5BF9;&#x5B89;&#x5168;&#x548C;&#x53EF;&#x7BA1;&#x7406;&#x6027;&#x7B49;&#x65B9;&#x9762;&#x8FDB;&#x884C;&#x4E86;&#x589E;&#x5F3A;<br>- &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x529F;&#x80FD;</td>
+<td>- &#x5BF9; Kubernetes &#x7684;&#x7BA1;&#x7406;&#x548C;&#x5B89;&#x5168;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;<br>- &#x6709;&#x8F83;&#x5F3A;&#x7684;&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x9700;&#x6C42;</td>
+</tr>
+<tr>
+<td>Rancher</td>
+<td>- &#x57FA;&#x4E8E; Kubernetes &#x7684;&#x5F00;&#x6E90;&#x5BB9;&#x5668;&#x7BA1;&#x7406;&#x5E73;&#x53F0;<br>- &#x96C6;&#x6210;&#x4E86; Istio&#x3001;Harbor &#x7B49;&#x7EC4;&#x4EF6;<br>- &#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684; UI &#x754C;&#x9762;&#x548C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;<br>- &#x652F;&#x6301;&#x591A;&#x79CD; Kubernetes &#x90E8;&#x7F72;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x3001;&#x81EA;&#x5EFA;&#x90E8;&#x7F72;&#x7B49;</td>
+<td>- &#x9700;&#x8981;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684; Kubernetes &#x7BA1;&#x7406;&#x5DE5;&#x5177;<br>- &#x9700;&#x8981;&#x652F;&#x6301;&#x591A;&#x79CD; Kubernetes &#x90E8;&#x7F72;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>K3s</td>
+<td>- &#x8F7B;&#x91CF;&#x7EA7;&#x7684; Kubernetes &#x53D1;&#x884C;&#x7248;<br>- &#x5B89;&#x88C5;&#x7B80;&#x5355;&#xFF0C;&#x53EF;&#x5FEB;&#x901F;&#x90E8;&#x7F72; Kubernetes &#x96C6;&#x7FA4;<br>- &#x8D44;&#x6E90;&#x5360;&#x7528;&#x4F4E;&#xFF0C;&#x9002;&#x5408;&#x5728;&#x8FB9;&#x7F18;&#x8BA1;&#x7B97;&#x7B49;&#x8D44;&#x6E90;&#x6709;&#x9650;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528;</td>
+<td>- &#x5728;&#x8D44;&#x6E90;&#x6709;&#x9650;&#x7684;&#x8FB9;&#x7F18;&#x8BA1;&#x7B97;&#x548C; IoT &#x7B49;&#x573A;&#x666F;&#x4E0B;&#x4F7F;&#x7528;<br>- &#x5BF9; Kubernetes &#x7684;&#x8F7B;&#x91CF;&#x7EA7;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6709;&#x9700;&#x6C42;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kubernetes-&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;"><a name="kubernetes-&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;" class="anchor-navigation-ex-anchor" href="#kubernetes-&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;"><i class="fa fa-link" aria-hidden="true"></i></a>Kubernetes &#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x90E8;&#x7F72;&#x5DE5;&#x5177;</th>
+<th>&#x7279;&#x70B9;</th>
+<th>&#x9002;&#x7528;&#x573A;&#x666F;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kubeadm</td>
+<td>- Kubernetes &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;<br>- &#x7B80;&#x5355;&#x6613;&#x7528;&#xFF0C;&#x9002;&#x5408;&#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x5C0F;&#x89C4;&#x6A21; Kubernetes &#x96C6;&#x7FA4;<br>- &#x652F;&#x6301;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;&#x548C;&#x6269;&#x5C55;</td>
+<td>- &#x5FEB;&#x901F;&#x642D;&#x5EFA;&#x5C0F;&#x89C4;&#x6A21; Kubernetes &#x96C6;&#x7FA4;<br>- &#x5BF9; Kubernetes &#x96C6;&#x7FA4;&#x7684;&#x914D;&#x7F6E;&#x548C;&#x6269;&#x5C55;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x6280;&#x672F;&#x8981;&#x6C42;</td>
+</tr>
+<tr>
+<td>kops</td>
+<td>- &#x7531; Kubernetes &#x5B98;&#x65B9;&#x63A8;&#x8350;&#x7684;&#x90E8;&#x7F72;&#x5DE5;&#x5177;<br>- &#x652F;&#x6301;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x3001;&#x5347;&#x7EA7;&#x548C;&#x7BA1;&#x7406; Kubernetes &#x96C6;&#x7FA4;<br>- &#x652F;&#x6301;&#x591A;&#x4E91;&#x5E73;&#x53F0;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;</td>
+<td>- &#x9700;&#x8981;&#x90E8;&#x7F72;&#x5927;&#x89C4;&#x6A21; Kubernetes &#x96C6;&#x7FA4;<br>- &#x9700;&#x8981;&#x652F;&#x6301;&#x591A;&#x4E91;&#x5E73;&#x53F0;</td>
+</tr>
+<tr>
+<td>Rancher</td>
+<td>- &#x5F00;&#x6E90;&#x7684; Kubernetes &#x7BA1;&#x7406;&#x5E73;&#x53F0;<br>- &#x652F;&#x6301;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406; Kubernetes &#x96C6;&#x7FA4;<br>- &#x652F;&#x6301;&#x591A;&#x79CD; Kubernetes &#x90E8;&#x7F72;&#x65B9;&#x5F0F;&#xFF0C;&#x5982;&#x6258;&#x7BA1;&#x670D;&#x52A1;&#x3001;&#x81EA;&#x5EFA;&#x90E8;&#x7F72;&#x7B49;<br>- &#x63D0;&#x4F9B;&#x4E86;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684; UI &#x754C;&#x9762;&#x548C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;</td>
+<td>- &#x9700;&#x8981;&#x7B80;&#x5355;&#x6613;&#x7528;&#x7684; Kubernetes &#x7BA1;&#x7406;&#x5DE5;&#x5177;<br>- &#x9700;&#x8981;&#x652F;&#x6301;&#x591A;&#x79CD; Kubernetes &#x90E8;&#x7F72;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>OpenShift</td>
+<td>- &#x57FA;&#x4E8E; Kubernetes &#x7684;&#x5F00;&#x6E90; PaaS &#x5E73;&#x53F0;<br>- &#x96C6;&#x6210;&#x4E86; Istio&#x3001;Knative &#x7B49;&#x7EC4;&#x4EF6;<br>- &#x9488;&#x5BF9;&#x5B89;&#x5168;&#x548C;&#x53EF;&#x7BA1;&#x7406;&#x6027;&#x7B49;&#x65B9;&#x9762;&#x8FDB;&#x884C;&#x4E86;&#x589E;&#x5F3A;<br>- &#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x9AD8;&#x5C42;&#x6B21;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x529F;&#x80FD;</td>
+<td>- &#x5BF9; Kubernetes &#x7684;&#x7BA1;&#x7406;&#x548C;&#x5B89;&#x5168;&#x8981;&#x6C42;&#x6BD4;&#x8F83;&#x9AD8;<br>- &#x6709;&#x8F83;&#x5F3A;&#x7684;&#x5E94;&#x7528;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x9700;&#x6C42;</td>
+</tr>
+<tr>
+<td>Kubespray</td>
+<td>- &#x5F00;&#x6E90;&#x7684; Kubernetes &#x90E8;&#x7F72;&#x5DE5;&#x5177;<br>- &#x652F;&#x6301;&#x591A;&#x79CD;&#x4E91;&#x5E73;&#x53F0;&#x548C;&#x81EA;&#x5B9A;&#x4E49;&#x914D;&#x7F6E;<br>- &#x63D0;&#x4F9B;&#x4E86;&#x7075;&#x6D3B;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x529F;&#x80FD;</td>
+<td>- &#x9700;&#x8981;&#x5728;&#x4E0D;&#x540C;&#x4E91;&#x5E73;&#x53F0;&#x4E0A;&#x90E8;&#x7F72; Kubernetes &#x96C6;&#x7FA4;<br>- &#x9700;&#x8981;&#x7075;&#x6D3B;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x90E8;&#x7F72;&#x548C;&#x7BA1;&#x7406;&#x529F;&#x80FD;</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>powered by <a href="https://chat.openai.com/" target="_blank">ChatGPT</a></p>
+</blockquote>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="mysql.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: MySQL">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Kubernetes","level":"1.4","depth":1,"previous":{"title":"MySQL","level":"1.3","depth":1,"path":"content/mysql.md","ref":"content/mysql.md","articles":[]},"dir":"ltr"},"config":{"plugins":["anchor-navigation-ex","ga"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"serif","size":2},"highlight":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"ga":{"configuration":"auto","token":"G-TRHEYFQGW4"},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":true,"instapaper":false,"vk":false,"all":["facebook","twitter","weibo","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","keywords":"AIGC","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"AIGC","links":{"home":false,"about":false,"issues":false,"contribute":false,"sidebar":{"AIGC":"https://www.chenshaowen.com/"},"tail":{"AIGC":"https://www.chenshaowen.com/aigc/"},"gitbook":false},"introduction":{"path":"README.md","title":"AIGC"},"gitbook":"*","description":"AIGC"},"file":{"path":"content/kubernetes.md","mtime":"2023-06-02T08:37:09.473Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-06-02T08:37:50.853Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
